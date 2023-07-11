@@ -10,7 +10,7 @@ namespace RegXPracticeProblem
 {
    public class Pattern
     {
-        //UC1:- As a User need to enter a valid FirstName- First name starts with Cap and has minimum 3 characters
+        //UC2:- As a User need to enter a valid Last Name - Last name starts with Cap and has minimum 3 characters
         public void ValidateFirstName()
         {
             Console.WriteLine("Enter the First name ");
@@ -18,13 +18,26 @@ namespace RegXPracticeProblem
             string firstName = "^[A-Z]{1}[a-z]{3,}?";
             if (Regex.IsMatch(name, firstName))
             {
-                Console.WriteLine("First Name is valid");
+                Console.WriteLine("First Name is Valid");
             }
             else
             {
-                Console.WriteLine("First Name is INVALID");
+                Console.WriteLine("First Name is Invalid");
             }
         }
-
+        public void ValidateLastName()
+        {
+            Console.WriteLine("Enter the Last name");
+            string name = Console.ReadLine();
+            string lastName = "^[A-Z]{1}[a-z]{3,}?";
+            if (Regex.IsMatch(name,lastName))
+            {
+                Console.WriteLine("Last Name is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is Invalid");
+            }
+        }
     }
 }
