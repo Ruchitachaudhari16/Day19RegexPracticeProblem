@@ -20,6 +20,7 @@ namespace RegXPracticeProblem
                 Console.WriteLine("3:Email Address");
                 Console.WriteLine("4:MobileNumber");
                 Console.WriteLine("5:Password");
+                Console.WriteLine("6:Sample Emails");
                 int choice = Convert.ToInt32(Console.ReadLine());
                
                 switch (choice)
@@ -48,6 +49,20 @@ namespace RegXPracticeProblem
                         pattern.ValidatePassword();
                         Console.WriteLine("--------------------------");
                         break;
+
+                        case 6:
+                        pattern.SampleTest("abc@yahoo.com");
+                        pattern.SampleTest("abc-100@yahoo.com");
+                        pattern.SampleTest("abc.100@yahoo.com");
+                        pattern.SampleTest("abc111@abc.com");
+                        pattern.SampleTest("abc-100@abc.net");
+                        pattern.SampleTest("abc.100@abc.com.au");
+                        pattern.SampleTest("abc@1.com");
+                        pattern.SampleTest("abc@gmail.com.com");
+                        pattern.SampleTest("abc+100@gmail.com");
+                        Console.WriteLine("--------------------------------");
+                        break;
+
 
 
                 }
