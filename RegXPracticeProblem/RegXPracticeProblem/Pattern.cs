@@ -10,7 +10,7 @@ namespace RegXPracticeProblem
 {
    public class Pattern
     {
-        //UC2:- As a User need to enter a valid Last Name - Last name starts with Cap and has minimum 3 characters
+        //UC3:-As a User need to enter a valid email- E.g.abc.xyz @bl.co.in - Email has 3 mandatory parts (abc, bl& co) and 2 optional(xyz & in) with precise @ and.positions
         public void ValidateFirstName()
         {
             Console.WriteLine("Enter the First name ");
@@ -37,6 +37,21 @@ namespace RegXPracticeProblem
             else
             {
                 Console.WriteLine("Last Name is Invalid");
+            }
+        }
+
+        public void ValidateEmail() 
+        {
+            Console.WriteLine("Enter the Email Address");
+            string email = Console.ReadLine();
+            string emailAddress = "^[A-Za-z0-9]{3,}([.][a-zA-z]+)?[@][A-Za-z]+[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
+            if (Regex.IsMatch(email, emailAddress))
+            {
+                Console.WriteLine("Email Address is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Email Address is invalid");
             }
         }
     }

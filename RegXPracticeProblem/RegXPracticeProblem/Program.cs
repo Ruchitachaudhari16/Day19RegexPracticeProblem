@@ -17,6 +17,7 @@ namespace RegXPracticeProblem
                 Console.WriteLine("Choose correct  options");
                 Console.WriteLine("1:First Name");
                 Console.WriteLine("2:Last Name");
+                Console.WriteLine("3:Email Address");
                 int choice = Convert.ToInt32(Console.ReadLine());
                
                 switch (choice)
@@ -30,6 +31,12 @@ namespace RegXPracticeProblem
                         pattern.ValidateLastName();
                         Console.WriteLine("---------------------------");
                         break;
+
+                        case 3:
+                        pattern.ValidateEmail();
+                        Console.WriteLine("---------------------------");
+                        break;
+
 
                 }
             }
