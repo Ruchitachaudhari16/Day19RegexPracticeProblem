@@ -54,5 +54,20 @@ namespace RegXPracticeProblem
                 Console.WriteLine("Email Address is invalid");
             }
         }
+        public void ValidateMobileNumber()
+        {
+            Console.WriteLine("Enter the Mobile Number");
+            string mobno =Console.ReadLine();
+           string mobilenumber = "^[+]?[0-9]{2}[ ][0-9]{10}$";
+            if (Regex.IsMatch(mobno,mobilenumber))
+            {
+                Console.WriteLine("Mobile number is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobile number is invalid");
+            }
+        }
     }
 }
+
