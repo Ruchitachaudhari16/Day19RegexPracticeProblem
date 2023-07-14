@@ -70,10 +70,10 @@ namespace RegXPracticeProblem
         }
         public void ValidatePassword()
         {
-            //Should have atleast one numeric number
+            //Should have atleast one special character
             Console.WriteLine("Enter the Password");
             string password = Console.ReadLine();
-            string pass = "^(?=.*?[A-Z])(?=.*?[0-9])[0-9A-Za-z@#$%&!]{8,}$";
+            string pass = "^(?=[a-zA-Z0-9#@$?-_]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
             if (Regex.IsMatch(password,pass))
             {
                 Console.WriteLine("Password is valid");
