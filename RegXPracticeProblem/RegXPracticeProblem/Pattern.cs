@@ -10,7 +10,7 @@ namespace RegXPracticeProblem
 {
    public class Pattern
     {
-        //UC3:-As a User need to enter a valid email- E.g.abc.xyz @bl.co.in - Email has 3 mandatory parts (abc, bl& co) and 2 optional(xyz & in) with precise @ and.positions
+      
         public void ValidateFirstName()
         {
             Console.WriteLine("Enter the First name ");
@@ -66,6 +66,20 @@ namespace RegXPracticeProblem
             else
             {
                 Console.WriteLine("Mobile number is invalid");
+            }
+        }
+        public void ValidatePassword()
+        {
+            Console.WriteLine("Enter the Password");
+            string password = Console.ReadLine();
+            string pass = "^[0-9A-Za-z@#$%&!]{8,}$";
+            if (Regex.IsMatch(pass, password))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Password is invalid");
             }
         }
     }
